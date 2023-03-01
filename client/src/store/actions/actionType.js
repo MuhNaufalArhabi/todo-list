@@ -1,0 +1,6 @@
+export const GET_ALL_CATEGORY = 'category/succesFetch'
+export const GET_CATEGORY_ID = 'category/succesFecthById'
+export const GET_ALL_TODO = 'todo/succesFetch'
+export const GET_TODO_ID = 'todo/succesFetchById'
+export const ADD_TODO = 'add/succesCreateTodo'
+export const ADD_CATEGORY = 'add/succesCreateCategory'

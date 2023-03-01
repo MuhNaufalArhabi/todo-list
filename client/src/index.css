@@ -1,0 +1,278 @@
+/* body {
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* .title { grid-area: main; }
+.image-home { grid-area: footer;}
+.register-login {grid-area: right;}
+
+.home-container {
+    display: grid;
+    grid-template-areas: 
+    'main main main main right right'
+    'footer footer footer footer right right';
+    gap: 10px;
+    padding: 10px;
+    height: 100vh
+}
+
+.home-container > div {
+    text-align: center;
+}
+
+.title {
+    font-size: 100px;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.background-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-bot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex: 2;
+  background-color: #FAFAFA;
+  height: 100%;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.right {
+  flex: 1;
+  padding: 30px;
+  justify-content: center;
+  background-color: #fff;
+  padding-top: 50px;
+}
+
+.title {
+  flex: 1;
+  font-size: 50px;
+  width: 315px;
+  background: linear-gradient(98.28deg, #eb5757 4.09%, #9b51e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.image {
+  flex: 2;
+  display: block;
+  width: 400px;
+  height: 200px;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login input[type="submit"] {
+  width: 95%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+.login input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.login-footer a {
+  text-decoration: none;
+}
+
+.sidebar {
+  flex: 1;
+  border: 1px solid lightgrey;
+}
+
+.sidebar-item {
+  display: flex;
+  padding: 100px 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.category {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.main-content {
+  flex: 3;
+  padding: 60px 50px;
+}
+
+.main-content h1 {
+  font-size: 50px;
+  font-weight: 700px;
+}
+
+.form-task input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e1dede;
+  margin-right: 10px;
+}
+
+.form-task select {
+  width: 25%;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e1dede;
+  margin-right: 10px;
+}
+
+.form-task input[type="submit"] {
+  width: 15%;
+  background-color: #007bff;
+  height: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.tasks {
+  margin-top: 20px;
+}
+
+.hidden{
+  display: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.category > a {
+  text-decoration: none;
+  color: #ABABAB
+}
+
+.category > input[type="text"]{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e1dede;
+}
+
+.background-home1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.background-home2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.form-control {
+  padding: 0px 10px;
+}
+
+.sub-task + .sub-task {
+  margin-top: 1em;
+}
+
+.sub-task {
+  display: flex
+}
+
+.sub-task span {
+  border: none;
+  margin-left: 10px;
+  color: #FFF;
+  border-radius: 40px;
+  font-size: 13px;
+  padding: 2px 20px;
+}
+
+.todo-box {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.3em;
+  height: 1.3em;
+  border: 3px solid #EB5757;
+  border-radius: 7px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.todo-box::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #39AE68;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.todo-box:checked::before {
+  transform: scale(1);
+}
+
+.status-done {
+  text-decoration-line: line-through;
+  color: #EB5757;
+}
+
+
