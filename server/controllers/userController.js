@@ -6,6 +6,9 @@ class UserController {
   static async register(req, res, next) {
     try {
       const { name, phoneNumber, email, username, password } = req.body;
+      if(phoneNumber[0] === "0" || phoneNumber[0] === '+') {
+        throw {name: "ValidationPhone"}
+      }
       await User.create({ name, phoneNumber, email, username, password });
       res.status(201).json({ message: "Succes create account" });
     } catch (error) {

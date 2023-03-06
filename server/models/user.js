@@ -5,7 +5,7 @@ class UserModel {
   static async create({ name, phoneNumber, email, username, password }) {
     return await User.create({
       name,
-      phoneNumber,
+      phoneNumber: "+62" + phoneNumber,
       email,
       username,
       password: hashPass(password),

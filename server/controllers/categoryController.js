@@ -1,4 +1,5 @@
 const Categoty = require('../models/category');
+const Todo = require('../models/todo');
 const { ObjectId } = require('mongodb');
 
 class CategotyController {
@@ -34,6 +35,7 @@ class CategotyController {
     static async delete(req, res, next){
         try {
             const id = req.params.id
+            await Todo.bulkDestroy(id)
             await Categoty.destroy(id)
             res.status(200).json({message: 'Succes delete category'})
         } catch (error) {

@@ -27,6 +27,10 @@ class TodoModel {
     static async destroy(id){
         return await Todo.deleteOne({_id: id})
     }
+
+    static async bulkDestroy(id){
+        return await Todo.deleteMany({category:id})
+    }
 }
 
 module.exports = TodoModel

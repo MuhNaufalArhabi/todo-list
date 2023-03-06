@@ -15,6 +15,9 @@ const error = (err, req, res, next) => {
     } else if(err.name === 'userOrPasswordWrong'){
         code = 401
         message = 'Email or password wrong'
+    } else if(err.name === 'ValidationPhone'){
+        code = 400
+        message = "Phone number start without 0 or +62"
     }
 
     res.status(code).json({message})
